@@ -20,8 +20,12 @@
         </form>
     </section>
     <footer>
-        <p>Created by [Your Name], [Date], Course: ITC 505</p>
+        <p>Created by Archana Kagithala, <span id="currentDate"></span>, Course: ITC 505</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Fetch current date and display in the footer
+        document.getElementById("currentDate").textContent = new Date().toLocaleDateString();
+    </script>
 </body>
 </html>
