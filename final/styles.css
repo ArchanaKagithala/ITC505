@@ -1,3 +1,4 @@
+```css:styles.css
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -32,9 +33,11 @@ h1 {
     z-index: 10;
 }
 
+/* Rest of your existing CSS remains the same */
+
+
 .game-container {
     width: 22rem;
-    margin-top: 20px;
 }
 
 .game-container #game {
@@ -185,6 +188,7 @@ h1 {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Styling for the dialog box */
 #helpDialog {
     border: none;
     border-radius: 10px;
@@ -199,23 +203,23 @@ h1 {
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
-
+  
 #helpDialog h3 {
     margin-top: 0;
     color: #333;
     text-align: center;
 }
-
+  
 #helpDialog ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-
+  
 #helpDialog ul li {
     margin-bottom: 10px;
-}
-
+} 
+  
 .close-btn {
     position: absolute;
     top: 10px;
@@ -225,7 +229,7 @@ h1 {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
+  
 .close-btn:hover {
     color: #ff0000;
 }
@@ -240,67 +244,78 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+  
 .btn:hover {
     background-color: #0056b3;
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
     .game-container {
         width: 18rem;
     }
+
     .game-container #game {
         height: 18rem;
     }
-    h1 {
+
+    .game-container #game #tiles .tile {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    body h1 {
         font-size: 2rem;
-        padding: 0 1rem;
-        margin-bottom: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
     .game-container {
         width: 15rem;
     }
+
     .game-container #game {
         height: 15rem;
     }
-    h1 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+
+    .game-container #game #tiles .tile {
+        height: 2.5rem;
+        width: 2.5rem;
     }
-    .addendum {
-        padding: 1rem;
-        font-size: 0.9rem;
+
+    body h1 {
+        font-size: 1.5rem;
+    }
+
+    .game-container .sidebar {
+        width: 15rem;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 0.5rem;
-    }
     .game-container {
         width: 12rem;
     }
+
     .game-container #game {
         height: 12rem;
     }
-    h1 {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
-        word-wrap: break-word;
+
+    .game-container #game #tiles .tile {
+        height: 2rem;
+        width: 2rem;
     }
-    .addendum {
-        padding: 0.5rem;
-        font-size: 0.8rem;
+
+    body h1 {
+        font-size: 1.25rem;
+    }
+
+    .game-container .sidebar {
+        width: 12rem;
     }
 }
 
-
+/* Keyframes for Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -308,4 +323,8 @@ h1 {
     to {
         opacity: 1;
     }
+}
+
+body {
+    animation: fadeIn 1s ease-in;
 }
