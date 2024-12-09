@@ -252,55 +252,54 @@ h1 {
     .game-container #game {
         height: 18rem;
     }
-    .game-container #game #tiles .tile {
-        height: 3rem;
-        width: 3rem;
-    }
-    body h1 {
+    h1 {
         font-size: 2rem;
-        margin-top: -80px;
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
     .game-container {
         width: 15rem;
     }
     .game-container #game {
         height: 15rem;
     }
-    .game-container #game #tiles .tile {
-        height: 2.5rem;
-        width: 2.5rem;
-    }
-    body h1 {
+    h1 {
         font-size: 1.5rem;
-        margin-top: -60px;
+        margin-bottom: 1rem;
     }
-    .game-container .sidebar {
-        width: 15rem;
+    .addendum {
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
     .game-container {
         width: 12rem;
     }
     .game-container #game {
         height: 12rem;
     }
-    .game-container #game #tiles .tile {
-        height: 2rem;
-        width: 2rem;
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        word-wrap: break-word;
     }
-    body h1 {
-        font-size: 1.25rem;
-        margin-top: -40px;
-    }
-    .game-container .sidebar {
-        width: 12rem;
+    .addendum {
+        padding: 0.5rem;
+        font-size: 0.8rem;
     }
 }
+
 
 @keyframes fadeIn {
     from {
