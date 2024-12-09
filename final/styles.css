@@ -1,5 +1,4 @@
 * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,40 +7,36 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: #000; /* Black background color */
+    background-color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Keep content aligned to the top */
     align-items: center;
-    color: #fff; /* White text for contrast on black background */
+    justify-content: flex-start;  /* Keep content aligned to the top */
+    color: #fff;
     font-family: "Source Sans Pro", sans-serif;
-    position: relative; /* For absolute positioning of elements */
 }
 
-/* Title styling */
-body h1 {
+h1 {
     font-size: 2.5rem;
     text-shadow: 1px 5px 4px #5686b5;
-    margin-top: 2rem; /* Keep the title from touching the top */
+    margin-top: 10%;  /* Add margin-top to avoid overlap with the start game button */
     margin-bottom: 2rem;
-    color: #ffffff; /* White text */
+    color: #ffffff;
     font-family: "Libre Baskerville", serif;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    position: absolute;  /* Position it absolutely at the top center */
-    top: 0;               /* Place it at the top of the page */
-    left: 50%;            /* Horizontally center it */
-    transform: translateX(-50%); /* Offset by 50% to center it */
 }
 
 .game-container {
     width: 22rem;
+    margin-top: 2rem;  /* Add space below the title to prevent overlap */
 }
 
 .game-container #game {
     height: 22rem;
     position: relative;
+    display: none;  /* Hide the game area initially */
 }
 
 .game-container #game #play,
@@ -73,52 +68,6 @@ body h1 {
     cursor: pointer;
     background: #5686b5;
     color: #003566;
-}
-
-.game-container #game #play {
-    display: flex;
-}
-
-.game-container #game #win {
-    flex-direction: column;
-    display: none;
-}
-
-.game-container #game #win span {
-    font-size: 5rem;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 700;
-    margin-bottom: 2rem;
-}
-
-.game-container #game #tiles {
-    display: none;
-    flex-wrap: wrap;
-}
-
-.game-container #game #tiles .tile {
-    border: 1px solid #003566;
-    height: 4rem;
-    width: 4rem;
-    margin: .1rem;
-    border-radius: 0;
-    transition: all 150ms linear;
-}
-
-.game-container #game #tiles .tile:hover {
-    cursor: pointer;
-    border: 2px solid #5686b5;
-}
-
-.game-container #game #tiles .on {
-    border: 2px solid #5686b5;
-    box-shadow: inset 0 0 1rem #5686b5;
-    transition: all 150ms linear;
-}
-
-.game-container #game #tiles .on:hover {
-    cursor: pointer;
-    border: 2px solid #71a5d9;
 }
 
 .game-container .sidebar {
@@ -166,67 +115,6 @@ body h1 {
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-/* Styling for the dialog box */
-#helpDialog {
-    border: none;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow: auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-}
-  
-#helpDialog h3 {
-    margin-top: 0;
-    color: #333;
-    text-align: center;
-}
-  
-#helpDialog ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-  
-#helpDialog ul li {
-    margin-bottom: 10px;
-} 
-  
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-  
-.close-btn:hover {
-    color: #ff0000;
-}
-
-.btn {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-  
-.btn:hover {
-    background-color: #0056b3;
 }
 
 /* Media Queries for Responsive Design */
@@ -295,16 +183,3 @@ body h1 {
     }
 }
 
-/* Keyframes for Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-body {
-    animation: fadeIn 1s ease-in;
-}
